@@ -320,11 +320,9 @@ function notAlow(event) {
 bot.on("message", function (event) {
   if ((event.message.type = "text")) {
     console.log(event.message.text);
-    console.log(process.env.CHANNEL_ACCESS_TOKEN,process.env.CHANNEL_SECRET)
     if (event.message.text != undefined && event.message.text != "") {
       translate(event.message.text, { from: 'zh-cn', to: 'zh-tw' }).then(res => {
         TransMsg = res;
-        console.log(TransMsg)
         if (event.source.groupId) {
           //收到文字訊息時，直接把收到的訊息傳回去
           if (TransMsg != "") {
