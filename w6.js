@@ -77,13 +77,6 @@ https://forum.gamer.com.tw/C.php?bsn=37030&snA=324&tnum=11`,
       break;
     }
 
-    case "ROX附魔": {
-      let storyinit = new roxFun();
-
-      storyinit.getMagicInfo(event);
-      break;
-    }
-
     case "ROX天氣": {
       let text = [
         {

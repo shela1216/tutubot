@@ -216,11 +216,6 @@
                 "action": "怪物經驗/base"
             },
             {
-                "info": "🔸 ROX附魔",
-                "desc": "查詢裝備附魔資訊",
-                "action": "ROX附魔"
-            },
-            {
                 "info": "🔸 ROX天氣",
                 "desc": "查詢遊戲天氣系統資訊",
                 "action": "ROX天氣"
