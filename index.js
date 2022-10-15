@@ -13,11 +13,10 @@ var translate = require('translate-google');
 let funJson = require("./function.json");
 let pictureJson = require("./picture.json");
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-var CHANNEL_ACCESS_TOKEN =
-  "RcZn7NPcFGBr9huArzndJAVP08yBlLQjcckiBRkmJ0a4aUZ008kqPLkyc92BREQVF+qzUFtlSYpaZ8xni0JoU6B1Agn67WS0j95aCPqjuh2dW56dm4NsNHSt54W6veWXuRZwZi+I1ZpIUAcpO75uYQdB04t89/1O/w1cDnyilFU=";
+var CHANNEL_ACCESS_TOKEN = process.env.CHANNEL_ACCESS_TOKEN
 var bot = linebot({
   channelId: "1655668137",
-  channelSecret: "007e0da6963b0add2e970e378f428942",
+  channelSecret: process.env.CHANNEL_SECRET,
   channelAccessToken: CHANNEL_ACCESS_TOKEN,
 });
 var firebase = require("firebase-admin");
