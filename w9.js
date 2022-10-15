@@ -7,10 +7,12 @@ function w9(event, msg) {
           text: `https://tutubot.net/archives/category/game_walkthrough/world_strage`,
         },
       ];
+
       event.reply(allText);
       break;
-      default:
+    default:
       break;
   }
 }
+
 module.exports = w9;

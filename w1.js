@@ -1,7 +1,9 @@
 function w4(event, msg) {
+  let allText;
+
   switch (msg) {
     case "ROO攻略集":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tutubot.net/archives/category/game_walkthrough/roo_strage`,
@@ -10,7 +12,7 @@ function w4(event, msg) {
       event.reply(allText);
       break;
     case "ROO社群推薦":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `「阿萬的《仙境傳說 愛如初見》 玩家討論區」！請點選以下連結加入社群！
@@ -20,17 +22,18 @@ function w4(event, msg) {
       event.reply(allText);
       break;
     case "ROO技能配點器":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `By 巴哈 snowlike
 https://www.republicofclown.com/roo/`,
         },
       ];
-      event.reply(allText);      
+      event.reply(allText);
       break;
     default:
       break;
   }
 }
+
 module.exports = w4;

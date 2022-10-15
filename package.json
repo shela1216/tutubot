@@ -27,6 +27,8 @@
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
-    "g-sheets-api": "^2.1.1"
+    "eslint": "^8.7.0",
+    "g-sheets-api": "^2.1.1",
+    "prettier": "^2.5.1"
   }
 }

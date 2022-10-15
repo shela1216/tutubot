@@ -1,7 +1,9 @@
 function w2(event, msg) {
+  var allText;
+
   switch (msg) {
-    case "天諭職業":
-      var text = {
+    case "天諭職業": {
+      let text = {
         type: "flex",
         altText: "天諭職業攻略",
         contents: {
@@ -472,10 +474,13 @@ function w2(event, msg) {
           ],
         },
       };
+
       event.reply(text);
       break;
+    }
+
     case "玉虛技能":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `🔥pve開荒：基礎技能：【穿雲】【驟雷】【電脈】【離火】【星劍】【星落】防禦二選一：自信帶【流星】保守帶【星盾】無雙：【天雷驚世劫】二選一【離火劍影】【天火玄冰墜】
@@ -491,7 +496,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "靈瓏技能":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `🔥pve開荒：【春風】【青蔓】【芊心】【白露】【飛螢】【千機】/【魚躍】+【萬靈共生】【靈猿·嘯空山】
@@ -509,7 +514,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "光刃技能":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `🔥PVE殺意輸出
@@ -533,7 +538,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "流光技能":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `🔥PVP單挑：
@@ -554,7 +559,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "聖堂技能":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `🔥pve開荒：【旋刺】【雷霆】【雷池】【光盾】【掃盪】【飛雷】—無雙技能【雷神千裂破】【雷神絕對守護】—-【地剛形態】
@@ -572,7 +577,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "天昭技能":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `🔥pve：鱗追、驚鱗、遊世、龍旋、英域、風裂、月碎 —無雙技能: 劍曲月華、劍嘯天絕 -- 龍魂型態
@@ -583,7 +588,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "英靈推薦":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/10/pets/`,
@@ -592,7 +597,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "公會貢獻":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `公會貢獻獲取方法如下:
@@ -615,19 +620,17 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "美食家食譜":
-      var allText = [
+      allText = [
         {
           type: "image",
-          originalContentUrl:
-            "https://ok.166.net/reunionpub/ds/kol/20210115/144525-ts6hsez5n2.png",
-          previewImageUrl:
-            "https://ok.166.net/reunionpub/ds/kol/20210115/144525-ts6hsez5n2.png",
+          originalContentUrl: "https://ok.166.net/reunionpub/ds/kol/20210115/144525-ts6hsez5n2.png",
+          previewImageUrl: "https://ok.166.net/reunionpub/ds/kol/20210115/144525-ts6hsez5n2.png",
         },
       ];
       event.reply(allText);
       break;
     case "人格系統":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/10/peop/`,
@@ -636,7 +639,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "神格系統":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/10/ghost/`,
@@ -645,7 +648,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "樂師樂譜":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://shouji.newyx.net/gl/716274.html`,
@@ -654,7 +657,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "機緣任務":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/11/fate/`,
@@ -663,7 +666,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "心魔攻略":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/10/heart/`,
@@ -672,7 +675,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "領地戰":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/12/war/`,
@@ -681,7 +684,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "隱藏結局":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/10/story/`,
@@ -690,7 +693,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "寶箱位置":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/10/boxSearch/`,
@@ -699,7 +702,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "青麟鎮妖":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/11/boss/`,
@@ -708,7 +711,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "寶石攻略":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/15/diamond/`,
@@ -717,7 +720,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "裝備提升":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/15/cloth/`,
@@ -726,7 +729,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "日常任務":
-      var allText = [
+      allText = [
         {
           type: "text",
           text: `https://tywarm.shela-pro.net/2021/06/28/taskall/`,
@@ -735,7 +738,7 @@ function w2(event, msg) {
       event.reply(allText);
       break;
     case "地球保衛戰":
-      var allText = [
+      allText = [
         {
           type: "image",
           originalContentUrl: "https://i.imgur.com/hUWuJ0I.jpg",
@@ -748,4 +751,5 @@ function w2(event, msg) {
       break;
   }
 }
+
 module.exports = w2;

@@ -1,4 +1,6 @@
 function w4(event, msg) {
+  let allText;
+
   switch (msg) {
     case "二國職業":
       var text = {
@@ -344,66 +346,62 @@ function w4(event, msg) {
           ],
         },
       };
+
       event.reply(text);
       break;
     case "技師技能":
-      var allText = [
+      allText = [
         {
           type: "image",
-          originalContentUrl:
-            "https://truth.bahamut.com.tw/s01/202105/33888ef88bbf60265f7702b553912ad1.JPG?w=1000",
-          previewImageUrl:
-            "https://truth.bahamut.com.tw/s01/202105/33888ef88bbf60265f7702b553912ad1.JPG?w=1000",
+          originalContentUrl: "https://truth.bahamut.com.tw/s01/202105/33888ef88bbf60265f7702b553912ad1.JPG?w=1000",
+          previewImageUrl: "https://truth.bahamut.com.tw/s01/202105/33888ef88bbf60265f7702b553912ad1.JPG?w=1000",
         },
       ];
+
       event.reply(allText);
       break;
     case "劍士技能":
-      var allText = [
+      allText = [
         {
           type: "image",
-          originalContentUrl:
-            "https://truth.bahamut.com.tw/s01/202105/8d1452df8349bb5884428cf5820318d5.JPG?w=1000",
-          previewImageUrl:
-            "https://truth.bahamut.com.tw/s01/202105/8d1452df8349bb5884428cf5820318d5.JPG?w=1000",
+          originalContentUrl: "https://truth.bahamut.com.tw/s01/202105/8d1452df8349bb5884428cf5820318d5.JPG?w=1000",
+          previewImageUrl: "https://truth.bahamut.com.tw/s01/202105/8d1452df8349bb5884428cf5820318d5.JPG?w=1000",
         },
       ];
+
       event.reply(allText);
       break;
     case "巫師技能":
-      var allText = [
+      allText = [
         {
           type: "image",
-          originalContentUrl:
-            "https://truth.bahamut.com.tw/s01/202105/07c6c25d1057cc577ebbcdb342d09818.JPG",
-          previewImageUrl:
-            "https://truth.bahamut.com.tw/s01/202105/07c6c25d1057cc577ebbcdb342d09818.JPG",
+          originalContentUrl: "https://truth.bahamut.com.tw/s01/202105/07c6c25d1057cc577ebbcdb342d09818.JPG",
+          previewImageUrl: "https://truth.bahamut.com.tw/s01/202105/07c6c25d1057cc577ebbcdb342d09818.JPG",
         },
       ];
+
       event.reply(allText);
       break;
     case "流氓技能":
-      var allText = [
+      allText = [
         {
           type: "image",
-          originalContentUrl:
-            "https://truth.bahamut.com.tw/s01/202105/dc32c42da641db95532f322d775dd383.JPG?w=1000",
-          previewImageUrl:
-            "https://truth.bahamut.com.tw/s01/202105/dc32c42da641db95532f322d775dd383.JPG?w=1000",
+          originalContentUrl: "https://truth.bahamut.com.tw/s01/202105/dc32c42da641db95532f322d775dd383.JPG?w=1000",
+          previewImageUrl: "https://truth.bahamut.com.tw/s01/202105/dc32c42da641db95532f322d775dd383.JPG?w=1000",
         },
       ];
+
       event.reply(allText);
       break;
     case "破壞者技能":
-      var allText = [
+      allText = [
         {
           type: "image",
-          originalContentUrl:
-            "https://truth.bahamut.com.tw/s01/202105/df4e2f973b1774c7ac1dc558bd339c6b.JPG?w=1000",
-          previewImageUrl:
-            "https://truth.bahamut.com.tw/s01/202105/df4e2f973b1774c7ac1dc558bd339c6b.JPG?w=1000",
+          originalContentUrl: "https://truth.bahamut.com.tw/s01/202105/df4e2f973b1774c7ac1dc558bd339c6b.JPG?w=1000",
+          previewImageUrl: "https://truth.bahamut.com.tw/s01/202105/df4e2f973b1774c7ac1dc558bd339c6b.JPG?w=1000",
         },
       ];
+
       event.reply(allText);
       break;
 
@@ -411,4 +409,5 @@ function w4(event, msg) {
       break;
   }
 }
+
 module.exports = w4;
