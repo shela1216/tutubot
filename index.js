@@ -34,7 +34,7 @@ const client = new botsdk.Client({
 });
 let story = new storyinit();
 
-function randPassword() {
+function randPassword () {
   var text = ["abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "1234567890"];
   var rand = function (min, max) {
     return Math.floor(Math.max(min, Math.random() * (max + 1)));
@@ -51,7 +51,7 @@ function randPassword() {
   return pw;
 }
 
-function getWorkList(event) {
+function getWorkList (event) {
   var workset = "";
   var weg = db.collection("gameWork");
 
@@ -75,7 +75,7 @@ ${workset}
   });
 }
 
-function noUserIdInfo(event) {
+function noUserIdInfo (event) {
   var text = [
     {
       type: "text",
@@ -86,7 +86,7 @@ function noUserIdInfo(event) {
   event.reply(text);
 }
 
-function WorkSetting(event, TransMsg) {
+function WorkSetting (event, TransMsg) {
   if (TransMsg.indexOf("設定資料庫") >= 0) {
     var reg = /^設定資料庫\/.*/;
 
@@ -171,7 +171,7 @@ bot.on("join", function (event) {
         groupPass: randPassword(),
         groupid: event.source.groupId,
         groupName: Name.groupName,
-        allow: true,
+        allow: false,
         white: false,
         work: "",
       })
@@ -183,7 +183,7 @@ bot.on("join", function (event) {
             content: "學習內容",
             learnKey: "學習關鍵字",
           })
-          .then(() => {});
+          .then(() => { });
 
         var memberList = db.collection("loginGroup").doc(event.source.groupId).collection("memberList").doc("title");
 
@@ -197,7 +197,7 @@ bot.on("join", function (event) {
             userid: "userId",
             workTag: "職業代號",
           })
-          .then(() => {});
+          .then(() => { });
       });
   });
 });
@@ -316,7 +316,7 @@ bot.on("memberLeft", function (event) {
   });
 });
 
-function notAlow(event) {
+function notAlow (event) {
   var replyText = [
     {
       type: "text",
@@ -909,7 +909,7 @@ bot.on("message", function (event) {
                                 .collection("memberLeave")
                                 .doc(userId + groupId);
 
-                              deleteList.delete().then(() => {});
+                              deleteList.delete().then(() => { });
                             });
                           });
                         });
