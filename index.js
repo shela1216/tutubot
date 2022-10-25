@@ -171,7 +171,7 @@ bot.on("join", function (event) {
         groupPass: randPassword(),
         groupid: event.source.groupId,
         groupName: Name.groupName,
-        allow: false,
+        allow: true,
         white: false,
         work: "",
       })
