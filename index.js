@@ -1141,10 +1141,12 @@ bot.on("message", function (event) {
                     }
 
                     var ref = db.collection("loginGroup").doc(event.source.groupId).collection("memberList");
+                    var hasList = false;
 
                     ref.get().then((querySnapshot) => {
                       querySnapshot.forEach((doc) => {
                         if (doc.data()["userid"] == userId && doc.data()["groupid"] == groupId) {
+                          hasList = true;
 
                           var deleteList = db
                             .collection("loginGroup")
@@ -1186,7 +1188,9 @@ bot.on("message", function (event) {
 
                           });
 
-                        } else {
+                        }
+
+                        if (hasList == false) {
                           var allText = [
                             {
                               type: "text",
