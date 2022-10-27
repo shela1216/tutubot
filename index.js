@@ -1158,6 +1158,24 @@ bot.on("message", function (event) {
                           .doc(userId + groupId);
 
                         deleteList.delete().then(() => {
+                          var allObj = {};
+
+                          allObj = {
+                            gameUser: doc.data()["gameUser"],
+                            userName: doc.data()["userName"],
+                            userid: doc.data()["userid"],
+                          };
+
+                          var setDoc = db
+                            .collection("loginGroup")
+                            .doc(event.source.groupId)
+                            .collection("memberLeave")
+                            .doc(doc.data()["userid"] + doc.data()["groupid"]);
+
+                          setDoc.set(allObj).then(() => {
+                            console.log("加入退群名單");
+                          });
+
                           var allText = [
                             {
                               type: "text",
