@@ -1141,65 +1141,64 @@ bot.on("message", function (event) {
                     }
 
                     var ref = db.collection("loginGroup").doc(event.source.groupId).collection("memberList");
-                    var hasList = false;
 
                     ref.get().then((querySnapshot) => {
                       querySnapshot.forEach((doc) => {
                         if (doc.data()["userid"] == userId && doc.data()["groupid"] == groupId) {
-                          hasList = true;
-                        }
-                      });
 
-                      if (hasList) {
-                        var deleteList = db
-                          .collection("loginGroup")
-                          .doc(event.source.groupId)
-                          .collection("memberList")
-                          .doc(userId + groupId);
-
-                        deleteList.delete().then(() => {
-                          var allObj = {};
-
-                          allObj = {
-                            gameUser: doc.data()["gameUser"],
-                            userName: doc.data()["userName"],
-                            userid: doc.data()["userid"],
-                          };
-
-                          var setDoc = db
+                          var deleteList = db
                             .collection("loginGroup")
                             .doc(event.source.groupId)
-                            .collection("memberLeave")
-                            .doc(doc.data()["userid"] + doc.data()["groupid"]);
+                            .collection("memberList")
+                            .doc(userId + groupId);
 
-                          setDoc.set(allObj).then(() => {
-                            console.log("加入退坑名單");
+                          deleteList.delete().then(() => {
+                            var allObj = {};
+
+                            allObj = {
+                              gameUser: doc.data()["gameUser"],
+                              userName: doc.data()["userName"],
+                              userid: doc.data()["userid"],
+                            };
+
+                            var setDoc = db
+                              .collection("loginGroup")
+                              .doc(event.source.groupId)
+                              .collection("memberLeave")
+                              .doc(userId + groupId);
+
+                            setDoc.set(allObj).then(() => {
+                              var allText = [
+                                {
+                                  type: "text",
+                                  text: "刪除簽到成功",
+                                },
+                                {
+                                  type: "image",
+                                  originalContentUrl: "https://i.imgur.com/zmZI8WF.png",
+                                  previewImageUrl: "https://i.imgur.com/zmZI8WF.png",
+                                },
+                              ];
+
+                              event.reply(allText);
+                            });
+
+
                           });
 
+                        } else {
                           var allText = [
                             {
                               type: "text",
-                              text: "刪除簽到成功",
-                            },
-                            {
-                              type: "image",
-                              originalContentUrl: "https://i.imgur.com/zmZI8WF.png",
-                              previewImageUrl: "https://i.imgur.com/zmZI8WF.png",
+                              text: "查無簽到資料無法刪除",
                             },
                           ];
 
                           event.reply(allText);
-                        });
-                      } else {
-                        var allText = [
-                          {
-                            type: "text",
-                            text: "查無簽到資料無法刪除",
-                          },
-                        ];
+                        }
+                      });
 
-                        event.reply(allText);
-                      }
+
                     });
                   });
 
