@@ -307,7 +307,7 @@ bot.on("memberLeft", function (event) {
               .doc(doc.data()["userid"] + doc.data()["groupid"]);
 
             setDoc.set(allObj).then(() => {
-              console.log("加入退群名單");
+              console.log("加入退坑名單");
             });
           });
         }
@@ -1173,7 +1173,7 @@ bot.on("message", function (event) {
                             .doc(doc.data()["userid"] + doc.data()["groupid"]);
 
                           setDoc.set(allObj).then(() => {
-                            console.log("加入退群名單");
+                            console.log("加入退坑名單");
                           });
 
                           var allText = [
@@ -1204,7 +1204,7 @@ bot.on("message", function (event) {
                   });
 
                   break;
-                case "刪除退群名單":
+                case "刪除退坑名單":
                   var lef = db.collection("loginGroup").doc(event.source.groupId).collection("memberLeave");
 
                   lef.get().then((querySnapshot) => {
@@ -1226,13 +1226,13 @@ bot.on("message", function (event) {
                   var allText = [
                     {
                       type: "text",
-                      text: "刪除退群資料成功",
+                      text: "刪除退坑資料成功",
                     },
                   ];
 
                   event.reply(allText);
                   break;
-                case "退群名單":
+                case "退坑名單":
                   var list = db.collection("loginGroup").doc(event.source.groupId).collection("memberLeave");
 
                   if (list) {
@@ -1254,7 +1254,7 @@ bot.on("message", function (event) {
                       if (listArray.length > 0) {
                         var allText = {
                           type: "flex",
-                          altText: "退群名單如下",
+                          altText: "退坑名單如下",
                           contents: {
                             type: "bubble",
                             header: {
@@ -1263,7 +1263,7 @@ bot.on("message", function (event) {
                               contents: [
                                 {
                                   type: "text",
-                                  text: "退群名單",
+                                  text: "退坑名單",
                                   weight: "bold",
                                   size: "lg",
                                   color: "#ffffff",
@@ -1289,8 +1289,8 @@ bot.on("message", function (event) {
                                   height: "sm",
                                   action: {
                                     type: "message",
-                                    label: "刪除退群名單",
-                                    text: "確認刪除退群",
+                                    label: "刪除退坑名單",
+                                    text: "確認刪除退坑",
                                   },
                                   color: "#FF2D2D",
                                 },
@@ -1305,7 +1305,7 @@ bot.on("message", function (event) {
                         let allText = [
                           {
                             type: "text",
-                            text: "無退群名單",
+                            text: "無退坑名單",
                           },
                         ];
 
@@ -1316,10 +1316,10 @@ bot.on("message", function (event) {
 
                   break;
 
-                case "確認刪除退群": {
+                case "確認刪除退坑": {
                   let allText = {
                     type: "flex",
-                    altText: "退群名單",
+                    altText: "退坑名單",
                     contents: {
                       type: "bubble",
                       size: "mega",
@@ -1329,7 +1329,7 @@ bot.on("message", function (event) {
                         contents: [
                           {
                             type: "text",
-                            text: "確定刪除退群名單?",
+                            text: "確定刪除退坑名單?",
                             color: "#FF2D2D",
                             size: "lg",
                           },
@@ -1350,7 +1350,7 @@ bot.on("message", function (event) {
                             action: {
                               type: "message",
                               label: "確認刪除",
-                              text: "刪除退群名單",
+                              text: "刪除退坑名單",
                             },
                             style: "primary",
                             color: "#FF2D2D",
