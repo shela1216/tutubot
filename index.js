@@ -765,7 +765,7 @@ bot.on("message", function (event) {
                                   },
                                   hero: {
                                     type: "image",
-                                    url: profile.pictureUrl,
+                                    url: profile.pictureUrl ? profile.pictureUrl : "https://i.imgur.com/QJhRLLO.jpg",
                                     size: "full",
                                     aspectRatio: "16:13",
                                     aspectMode: "cover",
